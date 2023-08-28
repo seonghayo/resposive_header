@@ -1,0 +1,103 @@
+@charset "utf-8";
+@import url(reset.css);
+
+.mobile {
+    display: none;
+}
+/* header */
+header {
+    height: 100px;
+}
+header .inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+header .inner .pc .gnb .depth01{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+header .inner .pc .gnb .depth01 > a {
+    padding: 0 30px;
+    line-height: 100px;
+    display: block;
+}
+header .inner .pc .gnb .depth01 .depth02 {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    background-color: #fff;
+    display: none;
+}
+header .inner .pc .gnb .depth01 .depth02 li {
+    padding: 10px 0;
+}
+.main_visual {
+    height: 100vh;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:1024px) {
+    .pc {display: none}
+    .mobile {display: block}
+    .mobile_gnb {
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.329);
+        text-align: center;
+    }
+    .menu_open {
+        cursor: pointer;
+    }
+    .mobile_gnb .menu_close {
+        background-color: #ffffff00;
+        display: inline-block;
+        width: 100px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        margin-top: 80px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+    }
+    .mobile_gnb .gnb {
+        width: 50%;
+        margin: 80px auto;
+        text-align: center;
+    }
+    .mobile_gnb .gnb .depth01 > a {
+        font-size: 24px;
+        background-color: rgb(255, 255, 255);
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+    .mobile_gnb .gnb .depth01 .depth02 {
+        background-color: rgba(255, 255, 255, 0);
+        margin-bottom: 30px;
+        border-radius: 30px;
+        display: none;
+    }
+    .mobile_gnb .gnb .depth01 .depth02 li {
+        color: white;
+        font-weight: bold;
+        padding: 10px 0;
+        border-bottom: 1px dotted #ffffff;
+    }
+}
