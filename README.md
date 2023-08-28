@@ -1,1 +1,1 @@
-# resposive_header
+# responsive_header
